@@ -1,0 +1,41 @@
+.logo {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #88d415;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #6c6c6c;
+  list-style: none;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 20px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.serchWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchBar {
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid #060606;
+}
