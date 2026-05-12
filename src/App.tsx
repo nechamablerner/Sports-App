@@ -1,25 +1,17 @@
 import { useState } from "react";
 import "./App.module.css";
+import SearchPage from "./Search";
+import PlayerDetails from "./PlayerDetails";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
   return (
     <>
-      <section id="center">
-        <div>
-          <h1>Get started</h1>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <Routes>
+        <Route path="/" element={<SearchPage />} />
+        <Route path="/player/:id" element={<PlayerDetails />} />
+      </Routes>
     </>
   );
 }
