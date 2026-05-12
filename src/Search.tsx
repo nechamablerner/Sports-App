@@ -23,6 +23,7 @@ export default function SearchPage() {
         const allMatches: SearchResults[] = players.map((player: Player) => ({
           id: player.idPlayer,
           type: "player",
+          sport: player.strSport,
           name: player.strPlayer,
           image: player.strThumb,
           team: player.strTeam,
@@ -61,12 +62,9 @@ export default function SearchPage() {
           <div key={item.id}>
             <img src={item.image} alt={item.name} />
             <h3>{item.name}</h3>
-            <p>
-              <strong>Team:</strong> {item.team}
-            </p>
-            <p>
-              <strong>Position:</strong> {item.postition}
-            </p>
+            <p>Sport: {item.sport}</p>
+            <p>Team: {item.team}</p>
+            <p>Position: {item.postition}</p>
             <Link to={`/player/${item.id}`}>
               <button>View Full Profile</button>
             </Link>

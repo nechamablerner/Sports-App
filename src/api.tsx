@@ -22,6 +22,7 @@ export interface SearchResults {
   Thumb?: string;
   nationality?: string;
   team?: string;
+  sport: string;
 }
 
 const url = "https://www.thesportsdb.com/api/v1/json/123";

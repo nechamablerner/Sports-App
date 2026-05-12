@@ -21,6 +21,7 @@ export default function DetailsPage() {
     <div>
       <h1>{player.strPlayer}</h1>
       <img src={player.strThumb} />
+      <p>Sport: {player.strSport}</p>
       <p>Team: {player.strTeam}</p>
       <p>Position: {player.strPosition}</p>
       <p>Nationality: {player.strNationality}</p>
