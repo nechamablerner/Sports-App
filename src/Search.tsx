@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { API } from "./api";
 import { Link } from "react-router-dom";
 import type { SearchResults, Player } from "./api";
+import styles from "./Search.module.css";
 
 export default function SearchPage() {
   const [query, setQuery] = useState<string>("");
@@ -43,10 +44,17 @@ export default function SearchPage() {
     }
   };
 
-  return (
-    <div>
-      <h1>Search Sports</h1>
+  loading && <p>Loading...</p>;
+  error && <p className={styles.error}>{error}</p>;
 
+  return (
+    <div className={styles.searchForm}>
+      <main className={styles.main}>
+        <div className={styles.heroSection}>
+          <h1 className={styles.title}>SportsDB</h1>
+          <p className={styles.subtitle}>For all your sports needs</p>
+        </div>
+      </main>
       <form onSubmit={handleSearch}>
         <input
           type="text"
@@ -59,12 +67,12 @@ export default function SearchPage() {
 
       <div>
         {results.map((item) => (
-          <div key={item.id}>
+          <div key={item.id} className={styles.resultItem}>
             <img src={item.image} alt={item.name} />
             <h3>{item.name}</h3>
-            <p>Sport: {item.sport}</p>
+            {/* <p>Sport: {item.sport}</p>
             <p>Team: {item.team}</p>
-            <p>Position: {item.postition}</p>
+            <p>Position: {item.postition}</p> */}
             <Link to={`/player/${item.id}`}>
               <button>View Full Profile</button>
             </Link>
