@@ -1,0 +1,52 @@
+.wrapper {
+  background-color: white;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroSection {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #88d415;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  color: #515151;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  margin-bottom: 40px;
+}
+
+.searchForm {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultItem {
+  background-color: white;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.resultItem img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}

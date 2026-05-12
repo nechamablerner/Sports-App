@@ -13,17 +13,13 @@ const Navbar = () => {
 
       <ul className={styles.links}>
         <li>
-          <Link to="/leagues">Leagues</Link>
+          <Link to="/players">Players</Link>
         </li>
         <li>
-          <Link to="/venues">Venues</Link>
+          <Link to="/contact-us">Contact Us</Link>
         </li>
-        <li className={styles.searchWrapper}>
-          <input
-            type="text"
-            placeholder="Search..."
-            className={styles.searchBar}
-          />
+        <li>
+          <Link to="/about">About</Link>
         </li>
       </ul>
     </nav>

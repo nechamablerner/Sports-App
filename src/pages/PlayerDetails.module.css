@@ -1,0 +1,13 @@
+.wrapper {
+  background-color: white;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.playerImage {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}

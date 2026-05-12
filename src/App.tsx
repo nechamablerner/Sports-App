@@ -1,22 +1,23 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./App.module.css";
 import SearchPage from "./Search";
-import PlayerDetails from "./PlayerDetails";
+import PlayerDetails from "./pages/PlayerDetails";
 import { Route, Routes } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
+import { Footer } from "./Footer";
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<SearchPage />} />
-        <Route path="/player/:id" element={<PlayerDetails />} />
-      
-      </Routes>
-    </>
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<SearchPage />} />
+          <Route path="/player/:id" element={<PlayerDetails />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
