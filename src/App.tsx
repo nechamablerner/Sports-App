@@ -5,6 +5,9 @@ import PlayerDetails from "./pages/PlayerDetails";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { Footer } from "./Footer";
+import LeaguesPage from "./pages/Leagues";
+import TeamDetails from "./pages/TeamDetails";
+import TeamsByLeague from "./pages/Teams";
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
         <Routes>
           <Route path="/" element={<SearchPage />} />
           <Route path="/player/:id" element={<PlayerDetails />} />
+          <Route path="/leagues" element={<LeaguesPage />} />
+          <Route path="/league/:leagueName" element={<TeamsByLeague />} />
+          <Route path="/details/:id" element={<TeamDetails />} />
         </Routes>
       </main>
       <Footer />

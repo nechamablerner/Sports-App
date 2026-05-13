@@ -11,7 +11,6 @@ export default function DetailsPage() {
   const [player, setPlayer] = useState<Player>();
 
   useEffect(() => {
-    // Now we call the API with the number we grabbed from the URL
     const fetchFullData = async () => {
       const player = await API.getPlayerById(id!);
       setPlayer(player);
