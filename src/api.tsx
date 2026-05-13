@@ -10,6 +10,15 @@ export interface Player {
   strPosition: string;
 }
 
+export interface Team {
+  idTeam: string;
+  strTeam: string;
+  strTeamBadge: string;
+  strDescriptionEN: string;
+  strStadium?: string;
+  strLeague: string;
+}
+
 // combined interface for results
 export interface SearchResults {
   id: string;
@@ -49,5 +58,26 @@ export const API = {
     const response = await fetch(`${url}/lookupplayer.php?id=${id}`);
     const data = await response.json();
     return data.players ? data.players[0] : null;
+  },
+
+  getLeagueTeams: async (leagueName: string): Promise<Team[]> => {
+    // The parameter 'l' is for League
+    const response = await fetch(`${url}/search_all_teams.php?l=${leagueName}`);
+
+    if (response.status === 429)
+      throw new Error("Rate limit exceeded. Please wait.");
+
+    const data = await response.json();
+
+    // Returns the array of teams found in that league
+    return data.teams || [];
+  },
+
+  getAllLeagues: async () => {
+    const response = await fetch(`${url}/all_leagues.php`);
+    const data = await response.json();
+
+    // This returns a list of leagues
+    return data.leagues || [];
   },
 };
