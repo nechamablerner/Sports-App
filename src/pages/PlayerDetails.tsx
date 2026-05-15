@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { API, type Player } from "../api";
 import styles from "./PlayerDetails.module.css";
 import EmojiToggle from "../components/HeartToggle";
+import BackButton from "../components/BackBttn";
 
 export default function DetailsPage() {
   const { id } = useParams();
@@ -60,9 +61,7 @@ export default function DetailsPage() {
       <p>Team: {player.strTeam}</p>
       <p>Position: {player.strPosition}</p>
       <p>Nationality: {player.strNationality}</p>
-      <button className={styles.backButton} onClick={() => navigate("/")}>
-        &larr; Back
-      </button>
+      <BackButton />
     </div>
   );
 }
