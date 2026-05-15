@@ -1,0 +1,13 @@
+.emojiToggle {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  text-align: center;
+}
+
+.favTitle {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
