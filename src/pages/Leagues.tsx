@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { API } from "../api";
 import { Link } from "react-router-dom";
+import styles from "./LeaguesPage.module.css";
 
 export default function LeaguesPage() {
   const [leagues, setLeagues] = useState<any[]>([]);
@@ -15,11 +16,15 @@ export default function LeaguesPage() {
   }, []);
 
   return (
-    <div className="leagues-grid">
-      <h1>Select a League</h1>
-      <div>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Select a League</h1>
+      <div className={styles.grid}>
         {leagues.map((league) => (
-          <Link key={league.idLeague} to={`/league/${league.strLeague}`}>
+          <Link
+            key={league.idLeague}
+            to={`/league/${league.strLeague}`}
+            className={styles.leagueCard}
+          >
             {league.strLeague}
           </Link>
         ))}

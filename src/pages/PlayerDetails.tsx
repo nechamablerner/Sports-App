@@ -22,7 +22,14 @@ export default function DetailsPage() {
   return (
     <div className={styles.wrapper}>
       <h1>{player.strPlayer}</h1>
-      <img src={player.strThumb} className={styles.playerImage} />
+      <img
+        src={player.strThumb || "/profilePhoto.png"}
+        alt={player.strPlayer}
+        className={styles.playerImage}
+        onError={(e) => {
+          e.currentTarget.src = "/profilePhoto.png";
+        }}
+      />
       <p>Sport: {player.strSport}</p>
       <p>Team: {player.strTeam}</p>
       <p>Position: {player.strPosition}</p>
