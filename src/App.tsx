@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import "./App.module.css";
 import SearchPage from "./Search";
 import PlayerDetails from "./pages/PlayerDetails";

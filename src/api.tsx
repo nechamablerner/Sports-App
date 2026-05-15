@@ -17,6 +17,8 @@ export interface Team {
   strDescriptionEN: string;
   strStadium?: string;
   strLeague: string;
+  strBadge: string;
+  strCountry: string;
 }
 
 // combined interface for results
