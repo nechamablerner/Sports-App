@@ -9,22 +9,6 @@ export default function SearchPage() {
   const [results, setResults] = useState<SearchResults[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-  // const [favorites, setFavorites] = useState<SearchResults[]>(() => {
-  //   const saved = localStorage.getItem("favorites");
-  //   return saved ? JSON.parse(saved) : [];
-  // });
-
-  // const toggleFavorite = (item: SearchResults) => {
-  //   const isFavorite = favorites.some((fav) => fav.id === item.id);
-  //   let updatedFavorites;
-  //   if (isFavorite) {
-  //     updatedFavorites = favorites.filter((fav) => fav.id !== item.id);
-  //   } else {
-  //     updatedFavorites = [...favorites, item];
-  //   }
-  //   setFavorites(updatedFavorites);
-  //   localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-  // };
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
