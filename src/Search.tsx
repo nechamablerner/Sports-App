@@ -70,9 +70,6 @@ export default function SearchPage() {
           <div key={item.id} className={styles.resultItem}>
             <img src={item.image} alt={item.name} />
             <h3>{item.name}</h3>
-            {/* <p>Sport: {item.sport}</p>
-            <p>Team: {item.team}</p>
-            <p>Position: {item.postition}</p> */}
             <Link to={`/player/${item.id}`}>
               <button>View Full Profile</button>
             </Link>
