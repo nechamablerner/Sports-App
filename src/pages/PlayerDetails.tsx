@@ -52,9 +52,12 @@ export default function DetailsPage() {
       />
       <h1>{player.strPlayer}</h1>
       <img
-        src={player.strThumb}
-        className={styles.playerImage}
+        src={player.strThumb || "/profilePhoto.png"}
         alt={player.strPlayer}
+        className={styles.playerImage}
+        onError={(e) => {
+          e.currentTarget.src = "/profilePhoto.png";
+        }}
       />
       <p>Sport: {player.strSport}</p>
       <p>Team: {player.strTeam}</p>
